@@ -1,0 +1,14 @@
+#server.servlet.context-path: /products
+security:
+  auth:
+    bypassUrls: /product/getProductDetailsById/*
+
+apiGateway:
+  base: http://localhost:8777
+  authService:
+    base: ${apiGateway.base}/auth
+
+  cartService:
+    base: ${apiGateway.base}/cart
+    
+    

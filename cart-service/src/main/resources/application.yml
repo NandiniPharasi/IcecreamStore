@@ -1,0 +1,10 @@
+security:
+  auth:
+    bypassUrls: /cart/getCartbyusername/*,/cart/deleteCartDetails/*
+
+apiGateway:
+  base: http://localhost:8777
+  authService:
+    base: ${apiGateway.base}/auth
+  productService:
+    base: ${apiGateway.base}/product

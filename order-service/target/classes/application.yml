@@ -1,0 +1,12 @@
+security:
+  auth:
+    bypassUrls:
+
+apiGateway:
+  base: http://localhost:8777
+  authService:
+    base: ${apiGateway.base}/auth
+  productService:
+    base: ${apiGateway.base}/product
+  cartService:
+    base: ${apiGateway.base}/cart
